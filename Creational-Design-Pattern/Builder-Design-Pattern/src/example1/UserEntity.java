@@ -1,4 +1,4 @@
-package example1.approach1;
+package example1;
 
 import java.time.LocalDate;
 

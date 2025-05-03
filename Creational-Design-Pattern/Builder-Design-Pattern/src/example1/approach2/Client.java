@@ -1,29 +1,26 @@
-package example1.approach1;
+package example1.approach2;
 
 import example1.Address;
 import example1.UserEntity;
 
 import java.time.LocalDate;
 
-// Client work as a Director
 public class Client {
 
     public static void main(String[] args) {
 
         UserEntity userEntity = getUserEntity();
-        UserDTO userDTO = build(new UserWebDTOBuilder(), userEntity);
+        UserDTO userDTO = build(UserDTO.getUserDTOBuilder(), userEntity);
         System.out.println(userDTO);
     }
 
-    /**
-     * This method serves role of Director in Builder Design Pattern
-     */
-    private static UserDTO build(UserWebDTOBuilder userWebDTOBuilder, UserEntity userEntity) {
-        return userWebDTOBuilder.withFirstName(userEntity.getFirstName())
+    private static UserDTO build(UserDTO.UserDTOBuilder userDTOBuilder, UserEntity userEntity) {
+        return userDTOBuilder.withFirstName(userEntity.getFirstName())
                 .withLastName(userEntity.getLastName())
                 .withAddress(userEntity.getAddress())
-                .withBirthDate(userEntity.getBirthDate())
+                .withAge(userEntity.getBirthDate())
                 .build();
+
     }
 
     private static UserEntity getUserEntity() {
