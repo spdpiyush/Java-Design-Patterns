@@ -1,0 +1,84 @@
+@startuml
+interface UserDTO {
+    +getName(): String
+    +getAddress(): String
+    +getAge(): String
+}
+
+interface UserDTOBuilder {
+    +withFirstName(String): UserDTOBuilder
+    +withLastName(String): UserDTOBuilder
+    +withBirthDate(LocalDate): UserDTOBuilder
+    +withAddress(Address): UserDTOBuilder
+    +build(): UserDTO
+    +getUserUserDTO(): UserDTO
+}
+
+class UserWebDTO implements UserDTO {
+    -name: String
+    -address: String
+    -age: String
+    +getName(): String
+    +getAddress(): String
+    +getAge(): String
+    +toString(): String
+}
+
+class UserWebDTOBuilder implements UserDTOBuilder {
+    -firstName: String
+    -lastName: String
+    -age: String
+    -address: String
+    -userWebDTO: UserWebDTO
+    +withFirstName(String): UserDTOBuilder
+    +withLastName(String): UserDTOBuilder
+    +withBirthDate(LocalDate): UserDTOBuilder
+    +withAddress(Address): UserDTOBuilder
+    +build(): UserDTO
+    +getUserUserDTO(): UserDTO
+}
+
+class Client {
+    +main(String[]): void
+}
+
+class UserEntity {
+    -firstName: String
+    -lastName: String
+    -birthDate: LocalDate
+    -address: Address
+    +getFirstName(): String
+    +setFirstName(String): void
+    +getLastName(): String
+    +setLastName(String): void
+    +getBirthDate(): LocalDate
+    +setBirthDate(LocalDate): void
+    +getAddress(): Address
+    +setAddress(Address): void
+}
+
+class Address {
+    -houseNumber: String
+    -street: String
+    -city: String
+    -zipCode: String
+    -state: String
+    +getHouseNumber(): String
+    +setHouseNumber(String): void
+    +getStreet(): String
+    +setStreet(String): void
+    +getCity(): String
+    +setCity(String): void
+    +getZipCode(): String
+    +setZipCode(String): void
+    +getState(): String
+    +setState(String): void
+}
+
+UserWebDTO "1" -- "1" UserWebDTOBuilder
+UserWebDTOBuilder ..> UserEntity
+UserWebDTOBuilder ..> Address
+UserEntity "1" o-- "1" Address
+Client ..> UserWebDTOBuilder
+@enduml
+
