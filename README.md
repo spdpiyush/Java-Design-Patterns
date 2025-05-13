@@ -16,6 +16,8 @@ This repository contains implementations of various design patterns in Java. It 
 ### 2. Creational Design Patterns
 - **[Builder Design Pattern](./Creational-Design-Pattern/Builder-Design-Pattern/)**: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 
+- **[Simple Factory Design Pattern](./Creational-Design-Pattern/Simple-Factory-Pattern/)**: A simple Factory is a class with a static method that creates and returns instances of different classes based on input parameters. It encapsulates object creation logic & promotes centralized creation code, clean client code and separation of concerns.
+
 
 ## Usage
 Navigate to the respective directories to explore the pattern implementations. Each pattern contains examples and documentation to assist in understanding its application.
