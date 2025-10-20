@@ -1,16 +1,24 @@
 package example1.violation;
 
 /**
- * The Invoice Class Handles multiple responsibilities.
+ * <p>
+ *     The Invoice Class Handles multiple responsibilities.
+ *     <ol>
+ *         <li>Business Logic (calculateTotal) </li>
+ *         <li>Printing (printInvoice) </li>
+ *         <li>Persistence (saveToDatabase> </li>
+ *     </ol>
+ * </p>
+ *
  * i.e. the class has more than one reason to change.
  */
 public class Invoice {
 
-    private String customer;
+    private String customerName;
     private double amount;
 
     public Invoice(String customer, double amount) {
-        this.customer = customer;
+        this.customerName = customer;
         this.amount = amount;
     }
 
@@ -27,6 +35,6 @@ public class Invoice {
 
     // 3. Printing Logic
     public void printInvoice() {
-        System.out.println("Customer : " + customer + " Amount : " + amount);
+        System.out.println("Customer : " + customerName + " Amount : " + amount);
     }
 }

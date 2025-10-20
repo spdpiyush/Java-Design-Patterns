@@ -24,7 +24,7 @@ This repository contains implementations of various design patterns in Java. It 
 
 - **[Factory Method Design Pattern](./Creational-Design-Pattern/Factory-Method-Pattern/)**: The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. It let's a class defer instantiation, promoting flexibility and loose coupling.
 
-- **[Prototype Design Pattern](./Creational-Design-Pattern/Prototype-Design-Pattern/)**: The Prototype Pattern is used to create objects by copying an existing object (a prototype), rather than instantiating new ones with <b><code>new</code></b>.
+- **[Prototype Design Pattern](./Creational-Design-Pattern/Prototype-Design-Pattern/)**: The Prototype Pattern is used to <b>create objects by copying an existing object</b> (a prototype), rather than instantiating new ones with <b><code>new</code></b>. when object creation is costly (eg: Database connection), when we want to create clones of complex objects.
 
 
 ## Usage

@@ -4,6 +4,7 @@ package example1.refactor;
  * Now, Split into 3 classes with single responsibility
  * Easy to test, modify and extend
  * Clean, modular design
+ * Each Class has one Reason to Change.
  */
 public class Runner {
 
