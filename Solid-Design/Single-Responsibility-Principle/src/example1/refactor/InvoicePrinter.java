@@ -1,7 +1,7 @@
 package example1.refactor;
 
 /**
- * Single Responsibility : Printing Invoice
+ * Single Responsibility : Handles Printing Responsibility
  */
 public class InvoicePrinter {
 
